@@ -59,14 +59,17 @@ APP_URL=http://localhost
 ```
 
 #### Database
+```ini
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
+```
 
 #### Mail (example using mailgun)
+```ini
 MAIL_MAILER=mailgun
 MAIL_HOST=mailhog
 MAIL_PORT=1025
@@ -78,9 +81,14 @@ MAIL_FROM_NAME="Laravel Course Management"
 MAILGUN_DOMAIN=your-mailgun-domain.com
 MAILGUN_SECRET=your-mailgun-api-key
 MAILGUN_ENDPOINT=api.mailgun.net
+```
+
 
 #### Admin email to receive contact form messages
+```ini
 ADMIN_EMAIL=admin@example.com
+```
+
 
 ## Application Usage
 Register a new user at /register with your name, email, and password.
