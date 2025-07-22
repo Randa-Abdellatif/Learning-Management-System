@@ -19,7 +19,7 @@ This Laravel application allows users to register and authenticate, manage cours
 - A web server (e.g., Apache, Nginx, or built-in PHP server)
 - Database (MySQL/MariaDB/PostgreSQL/SQLite)
 - Mail service configured for sending emails (mailgun or other)
-- Node.js (optional, for frontend assets)
+- Node.js (for frontend assets)
 
 ## Installation Instructions
 
@@ -29,24 +29,34 @@ git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
 cd Learning-Management-System 
 ```
 
-### 2. Summary of All Setup Commands (Laravel 11 + Frontend)
-#### Backend setup
+
+### 2. Backend setup
+```bash
 composer install
 cp .env.example .env
 php artisan migrate
+```
 
-#### Frontend setup
+
+### 3. Frontend setup
+```bash
 npm install
 npm run dev
+```
 
-#### Serve the app
+
+### 4. Serve the app
+```bash
 php artisan serve
+```
+## .env Configuration
+Update your .env file:
 
-Edit .env and update the following entries accordingly:
-dotenv
 #### Application
+```ini
 APP_NAME="Laravel Course Management"
 APP_URL=http://localhost
+```
 
 #### Database
 DB_CONNECTION=mysql
