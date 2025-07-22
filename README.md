@@ -34,7 +34,7 @@ cp .env.example .env
 Edit .env and update the following entries accordingly:
 
 dotenv
-# Application
+#### Application
 APP_NAME="Laravel Course Management"
 APP_URL=http://localhost
 
