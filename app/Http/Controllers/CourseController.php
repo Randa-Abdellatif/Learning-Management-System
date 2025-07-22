@@ -37,7 +37,7 @@ class CourseController extends Controller
             'end_date' => 'required|date|after_or_equal:start_date',
         ]);
 
-        Course::create($request->only('title', 'description', 'start_date', 'end_date'));
+        auth()->user()->courses()->create($request->only('title', 'description', 'start_date', 'end_date'));
 
         return redirect()->route('courses.index')->with('success', 'Course created successfully.');
     }
