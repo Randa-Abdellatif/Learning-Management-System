@@ -91,20 +91,20 @@ ADMIN_EMAIL=admin@example.com
 
 
 ## Application Usage
--Register a new user at /register with your name, email, and password.
--After registration or login, you will be redirected to the dashboard at /home.
--The dashboard has Browse All as buttons or boxes that shows the list of courses.  
+- Register a new user at /register with your name, email, and password.
+- After registration or login, you will be redirected to the dashboard at /home.
+- The dashboard has Browse All as buttons or boxes that shows the list of courses.  
 From there, you can view course details, and manage courses by creating, editing, or deleting.
--To submit a message to the admin, visit the contact form at /contact.
--The message will be emailed to the admin email configured in .env.
+- To submit a message to the admin, visit the contact form at /contact.
+- The message will be emailed to the admin email configured in .env.
 
 ## Important Notes
--All course pages and actions require authentication.
--Passwords are securely hashed using Laravel’s built-in hashing.
--The contact form uses Laravel’s mailing system; verify your mail credentials are correct for successful email delivery.
+- All course pages and actions require authentication.
+- Passwords are securely hashed using Laravel’s built-in hashing.
+- The contact form uses Laravel’s mailing system; verify your mail credentials are correct for successful email delivery.
 
 ## Troubleshooting
--Check your .env configuration for proper database and mail setup.
--Review logs for errors at storage/logs/laravel.log.
--Make sure your database server is running.
--Ensure mail credentials are valid.
+- Check your .env configuration for proper database and mail setup.
+- Review logs for errors at storage/logs/laravel.log.
+- Make sure your database server is running.
+- Ensure mail credentials are valid.
