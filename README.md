@@ -24,9 +24,10 @@ This Laravel application allows users to register and authenticate, manage cours
 ## Installation Instructions
 
 ### 1. Clone the repository
-```bash```
+```bash
 git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
-cd Learning-Management-System
+cd Learning-Management-System 
+```
 
 ### 2. Summary of All Setup Commands (Laravel 11 + Frontend)
 #### Backend setup
