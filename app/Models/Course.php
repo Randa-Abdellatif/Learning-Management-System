@@ -17,13 +17,10 @@ class Course extends Model
     'end_date' => 'datetime',
 ];
 
-    // public function students()
-    // {
-    //     return $this->belongsToMany(Student::class, 'course_student');
-    // }
+public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
-    // public function instructors()
-    // {
-    //     return $this->belongsToMany(Instructor::class, 'course_instructor');
-    // }
+
 }

@@ -1,66 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Learning Management System (LMS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This Laravel application allows users to register and authenticate, manage courses (CRUD operations), and submit a contact form that sends an email to the admin.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- User registration with name, email, and password
+- User authentication (login/logout)
+- Authenticated users can create, read, update, and delete courses
+- Each course includes a title, description, start date, and end date
+- Contact form with name, email, and message fields
+- Contact form submission sends an email to the admin email address
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 8.x
+- Composer
+- A web server (e.g., Apache, Nginx, or built-in PHP server)
+- Database (MySQL/MariaDB/PostgreSQL/SQLite)
+- Mail service configured for sending emails (SMTP or other)
 
-## Learning Laravel
+## Installation Instructions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1. Clone the repository
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
+cd Learning-Management-System
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Install PHP dependencies
+bash
+composer install
 
-## Laravel Sponsors
+3. Set up environment variables
+Copy the example environment file and modify it:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+bash
+cp .env.example .env
+Edit .env and update the following entries accordingly:
 
-### Premium Partners
+dotenv
+# Application
+APP_NAME="Laravel Course Management"
+APP_URL=http://localhost
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+# Database
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password
 
-## Contributing
+# Mail (example using mailgun)
+MAIL_MAILER=mailgun
+MAIL_MAILER=mailgun
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=no-reply@example.com
+MAIL_FROM_NAME="Laravel Course Management"
+MAILGUN_DOMAIN=your-mailgun-domain.com
+MAILGUN_SECRET=your-mailgun-api-key
+MAILGUN_ENDPOINT=api.mailgun.net
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Admin email to receive contact form messages
+ADMIN_EMAIL=admin@example.com
 
-## Code of Conduct
+4. Run database migrations
+bash
+php artisan migrate
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. Run the application
+Start the application development server:
 
-## Security Vulnerabilities
+bash
+php artisan serve
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Application Usage
+Register a new user at /register with your name, email, and password.
+After registration or login, you will be redirected to the dashboard at /home.
+The dashboard has Browse All as buttons or boxes that shows the list of courses.  
+From there, you can view course details, and manage courses by creating, editing, or deleting.
+To submit a message to the admin, visit the contact form at /contact.
+The message will be emailed to the admin email configured in .env.
 
-## License
+## Important Notes
+All course pages and actions require authentication.
+Passwords are securely hashed using Laravel’s built-in hashing.
+The contact form uses Laravel’s mailing system; verify your mail credentials are correct for successful email delivery.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##Troubleshooting
+Check your .env configuration for proper database and mail setup.
+Review logs for errors at storage/logs/laravel.log.
+Make sure your database server is running.
+Ensure mail credentials are valid.

@@ -30,7 +30,6 @@ class FormSubmissionMail extends Mailable
     {
         return new Envelope(
             subject: 'Form Submission Mail',
-            //from: [$this->formData['email'] => $this->formData['name']],
         );
     }
 
