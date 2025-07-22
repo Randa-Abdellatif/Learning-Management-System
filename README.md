@@ -21,20 +21,15 @@ This Laravel application allows users to register and authenticate, manage cours
 
 ## Installation Instructions
 
-### 1. Clone the repository
-
-```bash
+# 1. Clone the repository
 git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
 cd Learning-Management-System
 
-2. Install PHP dependencies
-bash
+# 2. Install PHP dependencies
 composer install
 
-3. Set up environment variables
+# 3. Set up environment variables
 Copy the example environment file and modify it:
-
-bash
 cp .env.example .env
 Edit .env and update the following entries accordingly:
 
@@ -68,11 +63,11 @@ MAILGUN_ENDPOINT=api.mailgun.net
 # Admin email to receive contact form messages
 ADMIN_EMAIL=admin@example.com
 
-4. Run database migrations
+# 4. Run database migrations
 bash
 php artisan migrate
 
-5. Run the application
+# 5. Run the application
 Start the application development server:
 
 bash
