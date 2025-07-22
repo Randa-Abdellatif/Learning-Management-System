@@ -13,26 +13,35 @@ This Laravel application allows users to register and authenticate, manage cours
 
 ## Requirements
 
-- PHP >= 8.x
+- PHP >= 8.2
+- Laravel 11
 - Composer
 - A web server (e.g., Apache, Nginx, or built-in PHP server)
 - Database (MySQL/MariaDB/PostgreSQL/SQLite)
-- Mail service configured for sending emails (SMTP or other)
+- Mail service configured for sending emails (mailgun or other)
+- Node.js (optional, for frontend assets)
 
 ## Installation Instructions
 
 ### 1. Clone the repository
+```bash```
 git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
 cd Learning-Management-System
 
-### 2. Install PHP dependencies
+### 2. Summary of All Setup Commands (Laravel 11 + Frontend)
+#### Backend setup
 composer install
-
-### 3. Set up environment variables
-Copy the example environment file and modify it:
 cp .env.example .env
-Edit .env and update the following entries accordingly:
+php artisan migrate
 
+#### Frontend setup
+npm install
+npm run dev
+
+#### Serve the app
+php artisan serve
+
+Edit .env and update the following entries accordingly:
 dotenv
 #### Application
 APP_NAME="Laravel Course Management"
@@ -48,7 +57,6 @@ DB_PASSWORD=your_database_password
 
 #### Mail (example using mailgun)
 MAIL_MAILER=mailgun
-MAIL_MAILER=mailgun
 MAIL_HOST=mailhog
 MAIL_PORT=1025
 MAIL_USERNAME=null
@@ -62,16 +70,6 @@ MAILGUN_ENDPOINT=api.mailgun.net
 
 #### Admin email to receive contact form messages
 ADMIN_EMAIL=admin@example.com
-
-### 4. Run database migrations
-bash
-php artisan migrate
-
-### 5. Run the application
-Start the application development server:
-
-bash
-php artisan serve
 
 ## Application Usage
 Register a new user at /register with your name, email, and password.
