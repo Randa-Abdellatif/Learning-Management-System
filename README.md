@@ -86,7 +86,7 @@ All course pages and actions require authentication.
 Passwords are securely hashed using Laravel’s built-in hashing.
 The contact form uses Laravel’s mailing system; verify your mail credentials are correct for successful email delivery.
 
-##Troubleshooting
+## Troubleshooting
 Check your .env configuration for proper database and mail setup.
 Review logs for errors at storage/logs/laravel.log.
 Make sure your database server is running.
