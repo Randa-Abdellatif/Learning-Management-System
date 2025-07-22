@@ -16,9 +16,9 @@ This Laravel application allows users to register and authenticate, manage cours
 - PHP >= 8.2
 - Laravel 11
 - Composer
-- A web server (e.g., Apache, Nginx, or built-in PHP server)
-- Database (MySQL/MariaDB/PostgreSQL/SQLite)
-- Mail service configured for sending emails (mailgun or other)
+- A web server (e.g., Apache)
+- Database (e.g., MySQL)
+- Mail service configured for sending emails (e.g., mailgun)
 - Node.js (for frontend assets)
 
 ## Installation Instructions
