@@ -21,14 +21,14 @@ This Laravel application allows users to register and authenticate, manage cours
 
 ## Installation Instructions
 
-# 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/Randa-Abdellatif/Learning-Management-System.git
 cd Learning-Management-System
 
-# 2. Install PHP dependencies
+### 2. Install PHP dependencies
 composer install
 
-# 3. Set up environment variables
+### 3. Set up environment variables
 Copy the example environment file and modify it:
 cp .env.example .env
 Edit .env and update the following entries accordingly:
@@ -38,7 +38,7 @@ dotenv
 APP_NAME="Laravel Course Management"
 APP_URL=http://localhost
 
-# Database
+#### Database
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -46,7 +46,7 @@ DB_DATABASE=your_database_name
 DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
 
-# Mail (example using mailgun)
+#### Mail (example using mailgun)
 MAIL_MAILER=mailgun
 MAIL_MAILER=mailgun
 MAIL_HOST=mailhog
@@ -60,14 +60,14 @@ MAILGUN_DOMAIN=your-mailgun-domain.com
 MAILGUN_SECRET=your-mailgun-api-key
 MAILGUN_ENDPOINT=api.mailgun.net
 
-# Admin email to receive contact form messages
+#### Admin email to receive contact form messages
 ADMIN_EMAIL=admin@example.com
 
-# 4. Run database migrations
+### 4. Run database migrations
 bash
 php artisan migrate
 
-# 5. Run the application
+### 5. Run the application
 Start the application development server:
 
 bash
